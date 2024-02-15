@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\multimedia\draw\draw\bin\Debug\draw.exe.config
+C:\Users\Admin\Desktop\multimedia\draw\draw\bin\Debug\draw.exe
+C:\Users\Admin\Desktop\multimedia\draw\draw\bin\Debug\draw.pdb
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.Form1.resources
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.Properties.Resources.resources
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.exe
+C:\Users\Admin\Desktop\multimedia\draw\draw\obj\Debug\draw.pdb

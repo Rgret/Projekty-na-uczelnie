@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Document</title>
+</head>
+<body onload="Load()">
+    <div id="bg" class="z-3"></div>
+    
+    <div class="progress" role="progressbar" aria-label="Experiance" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10">
+        <div class="progress-bar" id="expBar" style="width: 0%"></div>
+    </div>
+
+    <div class="position-absolute" id="HPLabel"></div>
+
+    <div class="z-2 container-fluid" id="screen"></div>
+    
+    <!--Death modal-->
+    <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" id="deathModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">You died.</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Restart?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" onClick="Restart()" class="btn btn-primary">Restart</button>
+              <p><a class="btn btn-secondary" href="#" onClick="Back()" role="button">Back</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Level Up modal-->
+      <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" id="levelUpModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Level Up</h5>
+            </div>
+            <div class="modal-body d-grid gap-2" id="levelUpModalBody">
+              <!-- stat increase buttons go here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Dev modal-->
+      <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" id="devModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Dev</h5>
+            </div>
+            <div class="modal-body d-grid gap-2" id="levelUpModalBody">
+              <!--  -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="godMode">
+                <label class="form-check-label" for="godMode">
+                  God Mode
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="spawnEnemies">
+                <label class="form-check-label" for="spawnEnemies">
+                  Spawn enemies
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="enemiesAI">
+                <label class="form-check-label" for="enemiesAI">
+                  Enemies AI
+                </label>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Add Exp" aria-label="Add Exp" aria-describedby="addExp" id="addExpValue">
+                <button class="btn btn-outline-secondary" type="button" onclick="devAddExp()" id="addExp">Add</button>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Add pnt" aria-label="Add Exp" aria-describedby="addPnt" id="addPntValue">
+                <button class="btn btn-outline-secondary" type="button" onclick="devAddPnt()" id="addPntValue">Add points</button>
+              </div>
+              <button class="btn btn-primary" onclick="player.devLevel()">Level Up</button>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#modifiers" aria-expanded="false" aria-controls="modifiers">
+                Stat modifiers from level ups
+              </button>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#stats" aria-expanded="false" aria-controls="stats">
+                Stats
+              </button>
+            </p>
+            <div class="collapse" id="modifiers">
+              <div class="card card-body" id="statModifiersLvl">
+                
+              </div>
+            </div>
+            <div class="collapse" id="stats">
+              <div class="card card-body" id="playerStats">
+                
+              </div>
+            </div>
+              <!--  -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" onClick="devClose()" class="btn btn-primary">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="js/spawner.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/orb.js"></script>
+    <script src="js/keyHandler.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/vector2js.min.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/anime.js"></script>
+</body>
+</html>

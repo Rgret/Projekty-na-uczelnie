@@ -1,0 +1,29 @@
+#bg {
+    position: fixed; 
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    opacity: 1;
+    pointer-events: none;
+    animation: bg 1s ease linear;
+}
+
+#screen{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#game-screen {
+    background-color: silver;
+}
+
+html, body {
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}

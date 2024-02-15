@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Projekt</title>
+</head>
+<body onload="Load()">
+
+    <div class="shadow-lg position-absolute translate-middle text-center" id="title-box"><p id="title"> Title </p></div>
+
+    <div class="container-fluid">
+        <div class="shadow-lg position-absolute top-50 start-50 translate-middle box text-center">
+            <p><a class="btn btn-primary" href="#" onclick="Start()" role="button">Start</a></p>
+            <p><a class="btn btn-primary shadow" onclick="pointShop()" href="#" role="button">Point Shop</a></p>
+            <a id="text"></a>
+        </div>
+    </div>
+
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" id="pointShop">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Point Shop</h5>
+        </div>
+        <div class="modal-body" id="shop">
+          <div id="points"></div>
+          <div id="shopContent"></div>
+          <!-- stat increase buttons go here -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="saveShop()">Save changes</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static" id="devModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dev</h5>
+        </div>
+        <div class="modal-body d-grid gap-2" id="levelUpModalBody">
+          <!--  -->
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Add pnt" aria-label="Add Exp" aria-describedby="addPnt" id="addPntValue">
+            <button class="btn btn-outline-secondary" type="button" onclick="devAddPnt()" id="addPnt">Add points</button>
+          </div>
+          <p><a class="btn btn-primary" href="#" onclick="wipe()" role="button">Wipe</a></p>
+          <!--  -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" onClick="devClose()" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <div class="bg"></div>
+    <script src="js/menu.js"></script>
+    <script src="js/anime.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

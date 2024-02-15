@@ -1,0 +1,60 @@
+body {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-size: 400% 400%;
+	animation: gradient 12s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#title {
+    position: absolute;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    animation: scale 2s linear infinite alternate;
+}
+
+#title-box {
+    top: 20%;
+    right: 50%;
+    width: 30px;
+}
+
+@keyframes scale {
+    0% { transform: scale(1) }
+    100% { transform: scale(1.5) }
+  }
+
+.bg {
+    position: fixed; 
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.box {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    min-width: 10%;
+    min-height: 20%;
+    border-radius: 20px;
+    border: 7px silver solid;
+    background-color: whitesmoke;
+}
